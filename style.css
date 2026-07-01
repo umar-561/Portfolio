@@ -1,0 +1,870 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ==========================================
+   ANIMATED BACKGROUND
+========================================== */
+
+.bg-animation{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    width:12px;
+    height:12px;
+    background:#00ff9d;
+    border-radius:50%;
+    opacity:.15;
+    animation:float 18s linear infinite;
+}
+
+.bg-animation span:nth-child(1){
+    left:10%;
+    animation-delay:0s;
+}
+
+.bg-animation span:nth-child(2){
+    left:35%;
+    animation-delay:4s;
+}
+
+.bg-animation span:nth-child(3){
+    left:60%;
+    animation-delay:7s;
+}
+
+.bg-animation span:nth-child(4){
+    left:82%;
+    animation-delay:2s;
+}
+
+.bg-animation span:nth-child(5){
+    left:95%;
+    animation-delay:10s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh) scale(0);
+}
+
+100%{
+transform:translateY(-120vh) scale(3);
+}
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:rgba(5,8,22,.92);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.navbar{
+
+max-width:1200px;
+margin:auto;
+padding:18px 30px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+font-size:2rem;
+font-weight:700;
+color:#00ff9d;
+
+}
+
+.logo span{
+
+color:white;
+
+}
+
+.nav-links{
+
+display:flex;
+gap:28px;
+
+}
+
+.nav-links a{
+
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#00ff9d;
+
+}
+
+.menu-btn{
+
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+align-items:center;
+
+padding:140px 10% 80px;
+
+gap:60px;
+
+}
+
+.hero-content{
+
+flex:1;
+
+}
+
+.hero-content h3{
+
+font-size:1.4rem;
+color:#00ff9d;
+
+margin-bottom:10px;
+
+}
+
+.hero-content h1{
+
+font-size:4rem;
+line-height:1.2;
+
+margin-bottom:15px;
+
+}
+
+.hero-content h2{
+
+font-size:2rem;
+
+color:#cfcfcf;
+
+height:50px;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+max-width:650px;
+
+line-height:1.8;
+
+font-size:1rem;
+
+color:#bcbcbc;
+
+margin-bottom:40px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn{
+
+padding:14px 34px;
+
+background:#00ff9d;
+
+color:#000;
+
+border-radius:40px;
+
+font-weight:700;
+
+transition:.35s;
+
+display:inline-block;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 25px #00ff9d;
+
+}
+
+.btn-outline{
+
+padding:14px 34px;
+
+border:2px solid #00ff9d;
+
+border-radius:40px;
+
+color:#00ff9d;
+
+transition:.35s;
+
+display:inline-block;
+
+}
+
+.btn-outline:hover{
+
+background:#00ff9d;
+
+color:black;
+
+box-shadow:0 0 25px #00ff9d;
+
+}
+
+/* ==========================================
+   HERO CARD
+========================================== */
+
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.profile-card{
+
+width:330px;
+
+height:330px;
+
+background:#0b1120;
+
+border:2px solid #00ff9d;
+
+border-radius:25px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 40px rgba(0,255,157,.25);
+
+transition:.4s;
+
+}
+
+.profile-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 60px rgba(0,255,157,.45);
+
+}
+
+.profile-card i{
+
+font-size:90px;
+
+color:#00ff9d;
+
+margin-bottom:20px;
+
+}
+
+.profile-card h2{
+
+font-size:1.8rem;
+
+margin-bottom:10px;
+
+}
+
+.profile-card p{
+
+color:#bbbbbb;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+text-align:center;
+
+font-size:2.6rem;
+
+margin-bottom:60px;
+
+position:relative;
+
+}
+
+.section-title::after{
+
+content:"";
+
+width:90px;
+
+height:4px;
+
+background:#00ff9d;
+
+display:block;
+
+margin:12px auto;
+
+border-radius:50px;
+
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about{
+    padding:100px 10%;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.about-box{
+    background:#0b1120;
+    border:1px solid rgba(0,255,157,.25);
+    border-radius:20px;
+    padding:35px;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(0,255,157,.08);
+}
+
+.about-box:hover{
+    transform:translateY(-10px);
+    border-color:#00ff9d;
+    box-shadow:0 0 35px rgba(0,255,157,.25);
+}
+
+.about-box h3{
+    color:#00ff9d;
+    font-size:1.7rem;
+    margin-bottom:18px;
+}
+
+.about-box p{
+    color:#cfcfcf;
+    line-height:1.9;
+}
+
+.about-box ul li{
+    margin:15px 0;
+    color:#d9d9d9;
+}
+
+.about-box strong{
+    color:#00ff9d;
+}
+
+/* ==========================================
+   SKILLS SECTION
+========================================== */
+
+#skills{
+    padding:100px 10%;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:#0b1120;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    border:1px solid rgba(0,255,157,.20);
+    transition:.35s;
+}
+
+.skill-card:hover{
+    transform:translateY(-12px);
+    border-color:#00ff9d;
+    box-shadow:0 0 35px rgba(0,255,157,.25);
+}
+
+.skill-card i{
+    font-size:55px;
+    color:#00ff9d;
+    margin-bottom:18px;
+}
+
+.skill-card h3{
+    font-size:1.3rem;
+    color:white;
+}
+
+/* ==========================================
+   EDUCATION SECTION
+========================================== */
+
+#education{
+    padding:100px 10%;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:30px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#00ff9d;
+}
+
+.timeline-box{
+    position:relative;
+    background:#0b1120;
+    border:1px solid rgba(0,255,157,.25);
+    border-radius:20px;
+    padding:35px;
+    margin-left:80px;
+    margin-bottom:40px;
+    transition:.35s;
+}
+
+.timeline-box::before{
+    content:"";
+    position:absolute;
+    left:-63px;
+    top:35px;
+    width:20px;
+    height:20px;
+    background:#00ff9d;
+    border-radius:50%;
+    box-shadow:0 0 20px #00ff9d;
+}
+
+.timeline-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,255,157,.25);
+}
+
+.timeline-box h3{
+    color:#00ff9d;
+    font-size:1.7rem;
+    margin-bottom:10px;
+}
+
+.timeline-box h4{
+    margin-bottom:15px;
+    color:white;
+}
+
+.timeline-box p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+/* ==========================================
+   PROJECTS SECTION
+========================================== */
+
+#projects{
+    padding:100px 10%;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#0b1120;
+    border-radius:20px;
+    border:1px solid rgba(0,255,157,.20);
+    padding:35px;
+    transition:.35s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-color:#00ff9d;
+    box-shadow:0 0 35px rgba(0,255,157,.25);
+}
+
+.project-card h3{
+    color:#00ff9d;
+    margin-bottom:15px;
+    font-size:1.5rem;
+}
+
+.project-card p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+/* ==========================================
+   CERTIFICATES SECTION
+========================================== */
+
+#certificates{
+    padding:100px 10%;
+}
+
+.certificate-card{
+    max-width:800px;
+    margin:auto;
+    background:#0b1120;
+    border:1px solid rgba(0,255,157,.25);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 0 20px rgba(0,255,157,.10);
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+    border-color:#00ff9d;
+    box-shadow:0 0 40px rgba(0,255,157,.25);
+}
+
+.certificate-card i{
+    font-size:70px;
+    color:#00ff9d;
+    margin-bottom:20px;
+}
+
+.certificate-card h3{
+    font-size:1.8rem;
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+.certificate-card p{
+    color:#cfcfcf;
+    line-height:1.8;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+#contact{
+    padding:100px 10%;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#0b1120;
+    border:1px solid rgba(0,255,157,.25);
+    border-radius:20px;
+    padding:40px;
+}
+
+.contact-box p{
+    color:#d0d0d0;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    background:#050816;
+}
+
+footer p{
+    color:#a8a8a8;
+    margin:6px 0;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050816;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff9d;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#00d684;
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero,
+.about,
+#skills,
+#education,
+#projects,
+#certificates,
+#contact{
+    animation:fadeUp .8s ease;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.hero-content h2{
+    font-size:1.6rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.profile-card{
+    width:280px;
+    height:280px;
+}
+
+.nav-links{
+    gap:18px;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    padding:18px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.nav-links{
+    display:none;
+}
+
+.hero{
+    padding:120px 25px 70px;
+}
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.hero-content h2{
+    font-size:1.3rem;
+}
+
+.section-title{
+    font-size:2rem;
+}
+
+.timeline::before{
+    left:12px;
+}
+
+.timeline-box{
+    margin-left:40px;
+}
+
+.timeline-box::before{
+    left:-38px;
+}
+
+.profile-card{
+    width:250px;
+    height:250px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.hero-content p{
+    font-size:.95rem;
+}
+
+.btn,
+.btn-outline{
+    width:100%;
+    text-align:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.profile-card{
+    width:220px;
+    height:220px;
+}
+
+.profile-card i{
+    font-size:70px;
+}
+
+}
+
+/* ==========================================
+   GLOW EFFECTS
+========================================== */
+
+.btn,
+.btn-outline,
+.skill-card,
+.project-card,
+.about-box,
+.timeline-box,
+.certificate-card{
+    transition:all .35s ease;
+}
+
+.skill-card:hover i,
+.project-card:hover h3,
+.about-box:hover h3,
+.timeline-box:hover h3{
+    text-shadow:0 0 15px #00ff9d;
+}
+
+/* ==========================================
+   SELECTION COLOR
+========================================== */
+
+::selection{
+    background:#00ff9d;
+    color:#000;
+}
+
